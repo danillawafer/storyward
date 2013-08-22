@@ -2,9 +2,10 @@ class User < ActiveRecord::Base
   has_many :stories
   has_many :roads
   has_many :votes
+  has_many :favorites
   validates :username, length: { in: 5..20 }, uniqueness: true
-  validates :password_hash, length: { minimum: 5 }, format: { with: /^[a-zA-Z0-9]+$/ }
-  validates :email, format: { with: /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/ }, uniqueness: true
+  validates :password_hash, length: { minimum: 5 }
+  validates :email, format: { with: /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/ }, uniqueness: true
 
   include BCrypt
 
