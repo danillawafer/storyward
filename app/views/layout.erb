@@ -24,13 +24,14 @@
 </head>
 <nav class="navbar navbar-default" role="navigation">
   <% if session[:user_id] %>
-    <h1 id='welcome_message'>Welcome, <%=username%></h1>
+    <h1 class='nav_welcome_message'>Storyward-->  Welcome, <%=username%></h1>
     <div class='nav_buttons'>
       <a href="/protected/user_profile/:user_id"><button class="btn btn-default navbar-btn">Home</button></a>
       <a href="/browse_stories"><button class="btn btn-default navbar-btn">Browse</button></a>
       <a href="/sign_out"><button class="btn btn-default navbar-btn">Sign Out</button></a>
     </div>
   <% else %>
+    <h1 class='nav_welcome_message'>Storyward--></h1>
     <div class='nav_buttons'>
       <a href="/sign_in"><button class="btn btn-default navbar-btn">Sign In</button></a>
       <a href="/sign_up"><button class="btn btn-default navbar-btn">Sign Up</button></a>
@@ -38,6 +39,8 @@
   <% end %>
 </nav>
 <body>
+  <div class='container'>
   <%= yield %>
+  </div>
 </body>
 </html>

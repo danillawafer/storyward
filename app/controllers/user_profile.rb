@@ -1,5 +1,8 @@
 get '/protected/user_profile/:user_id' do
 	@user = User.find_by_id(session[:user_id])
+	@stories = @user.stories.sort! { |x,y| y.created_at <=> x.created_at } 
+	@roads = @user.roads.sort! { |x,y| y.created_at <=> x.created_at }
+	@favorites = @user.favorites.sort! { |x,y| y.created_at <=> x.created_at }
 	erb :user_profile
 end
 

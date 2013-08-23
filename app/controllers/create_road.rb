@@ -5,7 +5,7 @@ end
 
 post '/protected/make_road/:story_id' do
 	create_road
-	# When a road is submitted, the story will become a user's favorite
-	make_favorite		
+	# Makes this story a user's favorite if not already
+	check_favorite		
 	redirect '/public_story/' + params[:story_id].to_s
 end
