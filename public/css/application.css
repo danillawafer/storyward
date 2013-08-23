@@ -89,3 +89,33 @@ a:hover {
 	text-align: center;
 }
 
+.creation_date {
+	float: right;
+}
+
+.sort_selector {
+	float:right;
+}
+
+.browse_header {
+	padding: 1em;
+}
+
+.browse_header *{
+	display:inline;
+}
+
+.story_content {
+	width: 100%;
+	height: 20em;
+	border: 1px solid black;
+}
+
+.build_road_button {
+	float: right;
+}
+
+.create_story_header {
+	text-align: center;
+}
+

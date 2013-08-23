@@ -1,5 +1,5 @@
 get '/protected/create_story' do
-	erb :write_upload
+	erb :write_or_upload
 end
 
 get '/protected/write_story' do

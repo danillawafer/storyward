@@ -1,7 +1,11 @@
 <h1><%= @story.title %>, by <%=@story.user.username%></h1>
-	<h2><%= @story.content %></h2>
+	<div class='story_content'>
+		<p><%= @story.content %></p>
+	</div>
 	<br>
-	<a href="/protected/write_road/<%=@story.id%>">Build a Road</a>
+	<div class='build_road_button'>
+		<a href="/protected/write_road/<%=@story.id%>" class="btn btn-default">Build a Road</a>
+	</div>
 
 <ul>
 <% @roads.each do |road| %>

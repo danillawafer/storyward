@@ -3,6 +3,11 @@ get '/browse_stories' do
 	erb :browse_stories
 end
 
+get '/tag_library' do
+	@tags = Tag.all
+	erb :tag_library
+end
+
 get '/tag_stories/:tag_id' do
 	@tag = Tag.find_by_id(params[:tag_id])
 	@stories = @tag.stories

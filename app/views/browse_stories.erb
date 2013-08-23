@@ -1,4 +1,4 @@
-<h1>Stories</h1>
+<div class='browse_header'><h1>Stories</h1><span class='sort_selector'><h3>Browse by:  <a href="/tag_library" class="btn btn-default">Tag</a></h3></span></div>
 
 <% @stories.each do |story| %>
 	<a href="/public_story/<%=story.id %>"><%= story.title %></a><br>

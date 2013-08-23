@@ -6,7 +6,7 @@ end
 
 get '/' do
   if session[:user_id]
-    redirect '/protected/user_profile/' + session[:user_id]
+    redirect '/protected/user_profile/' + session[:user_id].to_s
   else
     erb :welcome
   end

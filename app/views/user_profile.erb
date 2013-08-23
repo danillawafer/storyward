@@ -6,7 +6,7 @@
 		<h2>Your Stories Written</h2>
 		<div class='list-group'>
 		<% @stories.each do |story| %>
-			<a href="/protected/user_story/<%=story.id%>" class='list-group-item'><%= story.title %></a>
+			<a href="/protected/user_story/<%=story.id%>" class='list-group-item'><%= story.title %><span class='creation_date'><%=story.created_at.to_date.strftime('%a %d %b %Y')%></span></a>
 		<% end %>
 		</div>
 	</div>
@@ -15,7 +15,7 @@
 		<h2>Your Roads Written</h2>
 		<div class='list-group'>
 		<% @roads.each do |road| %>
-			<a href="/public_story/<%=road.road_story.id%>" class='list-group-item'><%= road.content %></a>
+			<a href="/public_story/<%=road.road_story.id%>" class='list-group-item'><%= road.content.slice(0..35) + '...' %><span class='creation_date'><%=road.created_at.to_date.strftime('%a %d %b %Y')%></span></a>
 		<% end %>
 		</div>
 	</div>
