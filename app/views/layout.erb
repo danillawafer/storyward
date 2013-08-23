@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <!-- 
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
@@ -17,6 +22,21 @@
 
   <title></title>
 </head>
+<nav class="navbar navbar-default" role="navigation">
+  <% if session[:user_id] %>
+    <h1 id='welcome_message'>Welcome, <%=username%></h1>
+    <div class='nav_buttons'>
+      <a href="/protected/user_profile/:user_id"><button class="btn btn-default navbar-btn">Home</button></a>
+      <a href="/browse_stories"><button class="btn btn-default navbar-btn">Browse</button></a>
+      <a href="/sign_out"><button class="btn btn-default navbar-btn">Sign Out</button></a>
+    </div>
+  <% else %>
+    <div class='nav_buttons'>
+      <a href="/sign_in"><button class="btn btn-default navbar-btn">Sign In</button></a>
+      <a href="/sign_up"><button class="btn btn-default navbar-btn">Sign Up</button></a>
+    </div>
+  <% end %>
+</nav>
 <body>
   <%= yield %>
 </body>

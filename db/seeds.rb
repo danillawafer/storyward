@@ -1,6 +1,8 @@
 seth = User.create(username: 'danillawafer', password: 'fastball', email:'seth@seth.com')
 
 the_story = Story.create(title: 'Adventure Story', content: 'There once was a man who went on a wild adventure to a faraway land! Help! What\'s next?...', user_id: 1)
+the_story2 = Story.create(title: 'Comedy Story', content: 'Funny funny Funny funny Funny funny Funny funny Funny funny', user_id: 1)
+the_story3 = Story.create(title: 'Romance Story', content: 'Mushy gooey Mushy gooey Mushy gooey Mushy gooey Mushy gooey', user_id: 1)
 
 story_road_1 = Road.create(user_id: 1, story_id: 1, content: 'That land happened to be Montana!')	
 story_road_2 = Road.create(user_id: 1, story_id: 1, content: 'That land happened to be the Far East!')

@@ -1,0 +1,6 @@
+<h1>Create A Road For <%=@story.title%></h1>
+
+	<form action='/protected/make_road/<%=@story.id%>' method='post'>
+		<textarea rows='30' cols	='40' name='content' placeholder='Maximum 1000 characters'></textarea>
+		<input type='submit' value='Submit'>
+	</form>

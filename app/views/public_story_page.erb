@@ -1,0 +1,10 @@
+<h1><%= @story.title %></h1>
+	<h2><%= @story.content %></h2>
+	<br>
+	<a href="/protected/write_road/<%=@story.id%>">Build a Road</a>
+
+<ul>
+<% @roads.each do |road| %>
+	<li><%= road.content %>   <%= road.up_votes %>  upvotes   <%= road.down_votes %>   downvotes</li>
+<% end %>
+</ul>

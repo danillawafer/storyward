@@ -1,9 +1,43 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+.nav_buttons button {
+	float:right;
+	margin: 1em;
 }
-th {
-  text-align: left;
+
+#navbar {
+	position: fixed;
 }
+
+#welcome_message {
+	float: left;
+	padding-left: 1em;
+}
+
+a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+#user_stories {
+	width: 30em;
+}
+
+#user_stories h2 {
+	text-align: center;
+}
+
+#user_roads {
+	width: 30em;
+}
+
+#user_roads h2 {
+	text-align: center;
+}
+
+#user_favorites {
+	width: 30em;
+}
+
+#user_favorites h2 {
+	text-align: center;
+}
+

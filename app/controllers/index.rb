@@ -16,9 +16,17 @@ get '/sign_up' do
 	erb :sign_up
 end
 
-post '/sign_in/:user_id' do
-	"sign the user in"
-	redirect '/user_profile/:user_id'
+post '/sign_up' do
+	sign_up
+end
+
+post '/sign_in/session' do
+	sign_in
+end
+
+get '/sign_out' do
+	session.clear
+	redirect '/'
 end
 
 

@@ -1,0 +1,10 @@
+<h1>Stories</h1>
+
+<% @stories.each do |story| %>
+	<a href="/public_story/<%=story.id %>"><%= story.title %></a><br>
+	<ul>
+		<% story.tags.each do |tag| %>
+			<a href="/tag_stories/<%=tag.id%>"><li><%= tag.name %></li></a>
+	<% end %>
+	</ul>
+<% end %>

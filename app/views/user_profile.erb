@@ -1,0 +1,26 @@
+<div id='user_stories'>
+	<h2>Your Stories Written</h2>
+	<div class='list-group'>
+	<% @user.stories.each do |story| %>
+		<a href="/protected/user_story/<%=story.id%>" class='list-group-item'><%= story.title %></a>
+	<% end %>
+	</div>
+</div>
+
+<div id='user_roads'>
+	<h2>Your Roads Written</h2>
+	<div class='list-group'>
+	<% @user.roads.each do |road| %>
+		<a href="/public_story/<%=road.road_story.id%>" class='list-group-item'><%= road.content %></a>
+	<% end %>
+	</div>
+</div>
+
+<div id='user_favorites'>
+	<h2>Your Favorite Stories</h2>
+	<div class='list-group'>
+	<% @user.favorites.each do |fav| %>
+		<a href="/public_story/<%=fav.story.id%>" class='list-group-item'><%= fav.story.title %></a>
+	<% end %>
+	</div>
+</div>
